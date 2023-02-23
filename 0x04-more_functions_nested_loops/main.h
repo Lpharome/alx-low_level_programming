@@ -18,6 +18,7 @@ void print_times_table(int n);
 /**
  * prototypes for module 0x03
  */
+int _putchar(char c);
 int _isupper(int c);
 int _isdigit(int c);
 int mul(int a, int b);
