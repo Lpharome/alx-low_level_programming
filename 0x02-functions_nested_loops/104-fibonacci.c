@@ -1,4 +1,5 @@
 #include <stdio.h>
+
 /**
  * print_fib - prints the first 50 Fibonacci numbers,
  * starting with 1 and 2, followed by a new line.
@@ -6,6 +7,8 @@
  *
  * Return: void
  */
+
+
 void print_fib(int len)
 {
 	unsigned int target, i;

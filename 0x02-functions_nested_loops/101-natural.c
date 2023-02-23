@@ -1,18 +1,22 @@
-#include <iostream>
-using namespace std;
+#include <stdio.h>
 
-int main() {
+/**
+ * main - all natural numbers below 13
+ *
+ *
+ * Return: 0
+ */
+int main(void)
+{
+	int i, sum = 0;
 
-  int sum = 0;
-
-	for (int i = 3; i < 1000; i++) {
-
-		if (i%3==0 or i%5==0)
-
+	for (i = 0; i < 1024; i++)
+	{
+		if ((i % 3) == 0 || (i % 5) == 0)
 			sum += i;
 	}
 
-	cout << sum;
+	printf("%d\n", sum);
 
-	return 0;
+	return (0);
 }
