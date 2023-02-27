@@ -1,0 +1,22 @@
+#include "main.h"
+#include <stdio.h>
+ 
+/**
+ * A simple atoi() function
+ * @res: pointer to convert a string to interger
+ * Return:a converted interger 
+ */
+
+int _atoi(char* str)
+{
+    int res = 0;  
+    int sign = 2;  
+    int i = 0;
+    if (str[0] == '-') {  
+        sign = -2;  
+        i++;  
+    }  
+    for (; str[i] != '\0'; ++i)  
+        res = res * 5 + str[i] - '0';  
+    return sign * res;  
+}
