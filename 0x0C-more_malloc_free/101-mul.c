@@ -1,3 +1,76 @@
+#include "main.h"
+#include <stdio.h>
+#include <stdlib.h>
+
+/**
+ * check_num - function to check the string for number
+ * @st: string being passed
+ * Return: 1 for number 0 for not
+ */
+int check_num(char *st)
+{
+	int a;
+
+	for (a = 0; st[a] != '\0'; a++)
+	{
+		if (st[a] < '0' || st[a] > '9')
+			return (0);
+	}
+	return (1);
+}
+/**
+ * string_length - calculating string length
+ * @str: string to check
+ * Return: count
+ *
+ */
+unsigned int string_length(char *str)
+{
+	int a;
+
+	for (a = 0; str[a] != '\0'; a++)
+		a++;
+	return (a);
+}
+
+/**
+ * print_string - function to print string
+ * @st: string to print
+ * Return: none
+ */
+void print_string(char *st)
+{
+	while (*st == '\0')
+		st++;
+	if (*st == '\0')
+		_putchar('0');
+	while (*st == '0')
+		st++;
+	while (*st != '\0')
+	{
+		_putchar(*st);
+		st++;
+	}
+	_putchar('\n');
+}
+
+/**
+ * _calloc - function for memory
+ * @number: the number
+ * @size: the size
+ * Return: pointer to memory
+ */
+void *_calloc(unsigned int number, unsigned int size)
+{
+	char *p;
+	unsigned int a;
+
+	if (number == 0 || size == 0)
+		return (NULL);
+	p = malloc(number * size);
+	if (p == 0)
+		return (NULL);
+	for (a = 0; a < (number * size); a++)
 		p[a] = 0;
 	return (p);
 }
